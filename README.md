@@ -1,8 +1,8 @@
 # ChatApp-Java
 
-![](screenshots/Screenshot from 2022-06-01 07-55-23.png)
+![](screenshots/Screenshot-from-2022-06-01-07-55-23.png)
 
-![](screenshots/Screenshot from 2022-06-01 15-06-45.png)
+![](screenshots/Screenshot-from-2022-06-01-15-06-45.png)
 
 ### Features
 
@@ -25,7 +25,7 @@ Firstly, because the program uses MariaDB to store user data, we need to create 
   mysql -u root -p
   ```
 
-  ![Screenshot from 2022-06-01 15-39-32](screenshots/Screenshot from 2022-06-01 15-39-32.png)
+  ![Screenshot from 2022-06-01 15-39-32](screenshots/Screenshot-from-2022-06-01-15-39-32.png)
 
 - Next, we need to create a database named “chatUser” with the following comand:
 
@@ -33,7 +33,7 @@ Firstly, because the program uses MariaDB to store user data, we need to create 
   CREATE DATABASE chatUser;
   ```
 
-  ![Screenshot from 2022-06-01 15-40-53](screenshots/Screenshot from 2022-06-01 15-40-53.png)
+  ![Screenshot from 2022-06-01 15-40-53](screenshots/Screenshot-from-2022-06-01-15-40-53.png)
 
 - Run the following SQL script to create the table:
 
@@ -54,7 +54,7 @@ Firstly, because the program uses MariaDB to store user data, we need to create 
   mvn install
   ```
 
-  ![Screenshot from 2022-06-01 16-58-33](screenshots/Screenshot from 2022-06-01 16-58-33.png)
+  ![Screenshot from 2022-06-01 16-58-33](screenshots/Screenshot-from-2022-06-01-16-58-33.png)
 
 - After maven says "BUILD SUCCESS", the `.jar` file will be in the directory called `target`, go to that directory and execute the java program by typing the following command:
 
@@ -64,7 +64,7 @@ Firstly, because the program uses MariaDB to store user data, we need to create 
 
 - Note, there will be 2 `.jar` files, we need to select the file whose name includes the word “with-dependencies.” For the ChatServer project we also do the same. The following screen shot is the result of the application running successfully:
 
-  ![](screenshots/Screenshot from 2022-06-01 17-23-00.png)
+  ![](screenshots/Screenshot-from-2022-06-01-17-23-00.png)
 
 
 
