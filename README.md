@@ -10,6 +10,7 @@
 + Chat 1v1
 + Chat with many people at the same time (Multithreading)
 + Chat Group
++ Send file
 
 
 
