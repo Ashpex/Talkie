@@ -22,13 +22,13 @@ import javax.swing.JOptionPane;
  * @author ashpex
  */
 public class AddPortForm extends javax.swing.JFrame {
-    List<String> danhSachPort = null;
+    List<String> listPorts = null;
     /**
      * Creates new form FormAddPort
      */
     public AddPortForm(List<String> listPort) {
         initComponents();
-        danhSachPort = listPort;
+        listPorts = listPort;
     }
 
     /**
@@ -115,11 +115,21 @@ public class AddPortForm extends javax.swing.JFrame {
     private void addPortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPortActionPerformed
         
         String stport = fieldPort.getText();
-        File f = new File("fileConfig.txt");
+        if(!new File("config.txt").exists()) {
+            FileWriter fw;
+            try {
+                fw = new FileWriter(new File("config.txt"));
+                fw.close();
+            } catch (IOException ex) {
+                Logger.getLogger(AddPortForm.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        File f = new File("config.txt");
         try {
+
             FileWriter fw = new FileWriter(f);
             
-            for (String i : danhSachPort) {
+            for (String i : listPorts) {
                 fw.write(i + "\n");
             }
             fw.write(stport);

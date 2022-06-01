@@ -36,7 +36,7 @@ public class LoginForm extends javax.swing.JFrame {
      */
     public LoginForm() {
         initComponents();
-        listPorts = layDanhSachPort();
+        listPorts = getListPorts();
         for (String i : listPorts) {
             fieldPort.addItem(i);
         }
@@ -263,8 +263,12 @@ public class LoginForm extends javax.swing.JFrame {
     private void deletePortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletePortActionPerformed
         String port = fieldPort.getSelectedItem().toString();
         if (listPorts.remove(port)) {
-            File f = new File("fileConfig.txt");
+            File f = new File("config.txt");
             try {
+                if(!new File("config.txt").exists()) {
+                FileWriter fw = new FileWriter(new File("config.txt"));
+                fw.close();
+                }
                 FileWriter fw = new FileWriter(f);
                 for (String i : listPorts) {
                     fw.write(i + "\n");
@@ -287,11 +291,27 @@ public class LoginForm extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_deletePortActionPerformed
 
-    public List<String> layDanhSachPort() {
+    public List<String> getListPorts() {
         Scanner sc = null;
         List<String> list = new ArrayList<String>();
+        if(!new File("config.txt").exists()) {
+            FileWriter fw = null;
+            try {
+                fw = new FileWriter(new File("config.txt"));
+                fw.append("3200"+"\n");
+                fw.close();
+            } catch (IOException ex) {
+                Logger.getLogger(LoginForm.class.getName()).log(Level.SEVERE, null, ex);
+            } finally {
+                try {
+                    fw.close();
+                } catch (IOException ex) {
+                    Logger.getLogger(LoginForm.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
         try {
-            File f = new File("fileConfig.txt");
+            File f = new File("config.txt");
             sc = new Scanner(f);
             while (sc.hasNextLine()) {
                 String line = sc.nextLine();

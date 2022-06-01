@@ -6,7 +6,7 @@
 package UI;
 
 import Controller.LoginController;
-import Controller.registerController;
+import Controller.RegisterController;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -152,7 +152,7 @@ public class RegisterForm extends javax.swing.JFrame {
             return;
         }
         try {
-            if(registerController.Register(username,password)){
+            if(RegisterController.Register(username,password)){
                JOptionPane.showMessageDialog(null,"Registered successfully!");
             }
             else{

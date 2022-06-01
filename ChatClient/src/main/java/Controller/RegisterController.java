@@ -16,7 +16,7 @@ import java.sql.Statement;
  *
  * @author ashpex
  */
-public class registerController {
+public class RegisterController {
     public static boolean Register(String userName, String passWord) throws SQLException, ClassNotFoundException{
         boolean resuilt = true;
         String SQL = "INSERT INTO chatUser VALUES (?,?)";

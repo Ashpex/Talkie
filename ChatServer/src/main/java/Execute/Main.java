@@ -19,11 +19,8 @@ public class Main {
 
     public static void main(String[] args) throws UnsupportedLookAndFeelException {
         FlatLightLaf.setup();
-        for(UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
-            System.out.println(info.getClassName());
-        }
         UIManager.setLookAndFeel(new FlatIntelliJLaf());
-
+        System.out.println("Chat Server is running");
 
         //</editor-fold>
 

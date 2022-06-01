@@ -186,6 +186,12 @@
       </Layout>
       <SubComponents>
         <Container class="javax.swing.JScrollPane" name="onlineAccounts">
+          <Events>
+            <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="onlineAccountsPropertyChange"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="ServerForm_onlineAccounts"/>
+          </AuxValues>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
@@ -213,6 +219,9 @@
                 <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
                 <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value=""/>
               </AccessibilityProperties>
+              <Events>
+                <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="listOfConnectionsPropertyChange"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

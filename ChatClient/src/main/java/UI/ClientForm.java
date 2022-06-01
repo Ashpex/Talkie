@@ -204,7 +204,7 @@ public class ClientForm extends javax.swing.JFrame {
                 {null}
             },
             new String [] {
-                "Tài Khoản"
+                "Accounts"
             }
         ) {
             Class[] types = new Class [] {

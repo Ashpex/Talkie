@@ -140,6 +140,12 @@ public class ServerForm extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        onlineAccounts.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                onlineAccountsPropertyChange(evt);
+            }
+        });
+
         listOfConnections.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null}
@@ -154,6 +160,11 @@ public class ServerForm extends javax.swing.JFrame {
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+        });
+        listOfConnections.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                listOfConnectionsPropertyChange(evt);
             }
         });
         onlineAccounts.setViewportView(listOfConnections);
@@ -270,6 +281,14 @@ public class ServerForm extends javax.swing.JFrame {
         }
         System.err.println("log");
     }//GEN-LAST:event_startActionPerformed
+
+    private void onlineAccountsPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_onlineAccountsPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_onlineAccountsPropertyChange
+
+    private void listOfConnectionsPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_listOfConnectionsPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_listOfConnectionsPropertyChange
 
     /**
      * @param args the command line arguments
