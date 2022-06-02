@@ -18,7 +18,7 @@ import java.sql.Statement;
  */
 public class RegisterController {
     public static boolean Register(String userName, String passWord) throws SQLException, ClassNotFoundException{
-        boolean resuilt = true;
+        boolean result = true;
         String SQL = "INSERT INTO chatUser VALUES (?,?)";
         Class.forName("org.mariadb.jdbc.Driver");
         Connection connection = DriverManager
@@ -34,14 +34,14 @@ public class RegisterController {
        int row = ps.executeUpdate();
        
        if(row < 1){
-           resuilt = false;
+           result = false;
        }
        } catch (Exception e) {
             e.printStackTrace();
-            resuilt = false;
+            result = false;
         }
        connection.close();
        ps.close();
-       return resuilt;
+       return result;
     }
 }

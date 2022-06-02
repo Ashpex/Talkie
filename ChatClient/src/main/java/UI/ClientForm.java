@@ -369,6 +369,7 @@ public class ClientForm extends javax.swing.JFrame {
                 Logger.getLogger(ClientForm.class.getName()).log(Level.SEVERE, null, ex);
             }
             messageArea.append("You sent file : " + fileName + " to " + nameFriend + "\n");
+            JOptionPane.showMessageDialog(null, "You sent " + " " + fileName +  " to " + nameFriend);
 
         }
     }//GEN-LAST:event_sendFileActionPerformed
@@ -440,7 +441,6 @@ public class ClientForm extends javax.swing.JFrame {
     }
     
      private void saveFile(File file, InputStream inStream) {
-         //Tham Khao
         FileOutputStream fileOut = null;
         
         try {
@@ -535,6 +535,7 @@ public class ClientForm extends javax.swing.JFrame {
                                 saveFile(file, socket.getInputStream());
                                 
                                 messageArea.append(userSend + " sent a file: " + fileName + ". Please check your folder\n");
+                                JOptionPane.showMessageDialog(null, "File has been received: " + fileName + " from " + userSend + ". Please check your folder");
                                 break;
                             }
                             default:

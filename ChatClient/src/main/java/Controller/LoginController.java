@@ -19,7 +19,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 public class LoginController {
     public static boolean Login(String userName, String passWord) throws SQLException, ClassNotFoundException{
-        boolean resuilt = false;
+        boolean result = false;
         String SQL = "SELECT username,userpassword FROM chatUser";
         Class.forName("org.mariadb.jdbc.Driver");
         Connection connection = DriverManager
@@ -29,13 +29,13 @@ public class LoginController {
         ResultSet resultSet = preparedStatement.executeQuery();
         while (resultSet.next()) {
             if(resultSet.getString(1).equals(userName) && resultSet.getString(2).equals(passWord)){
-                resuilt = true;
+                result = true;
             }
         }
         connection.close();
         resultSet.close();
         preparedStatement.close();
-        return resuilt;
+        return result;
     }
     
 }
