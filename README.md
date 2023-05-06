@@ -1,4 +1,4 @@
-# ChatApp-Java
+# 💬 Talkie
 
 ![](screenshots/Screenshot-from-2022-06-01-07-55-23.png)
 
